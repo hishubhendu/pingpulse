@@ -1,6 +1,6 @@
 # 🏓 PingPulse — Website Health Monitor
 
-## What is PingPulse? (Explain it like I'm 8!)
+## What is PingPulse? 
 
 Imagine you have a toy robot. You tell the robot: *"Hey, every minute, go knock on my friend's door and check if they answer."*
 
