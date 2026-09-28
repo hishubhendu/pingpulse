@@ -67,7 +67,7 @@ PingPulse/
 │   ├── celery.py           ← Celery startup config
 │   ├── wsgi.py             ← Production web server entry
 │   └── asgi.py             ← Async web server entry
-├── .env                    ← Secret passwords & config (never commit!)
+├── .env                    ← Secret passwords & config
 ├── requirements.txt        ← List of libraries to install
 ├── Dockerfile              ← Recipe to build the app container
 ├── docker-compose.yml      ← Runs all services together
@@ -167,18 +167,6 @@ Key sections:
 
 ### `config/wsgi.py` & `config/asgi.py` — Web Server Entry Points
 **Why they exist:** These are the standard entry points for deploying Django. `wsgi.py` is for traditional servers (Gunicorn), `asgi.py` is for async servers. Docker uses `wsgi.py` via Gunicorn in production.
-
----
-
-### `.env` — Secret Configuration File
-**Why it exists:** Stores sensitive values that should never be hardcoded in code or committed to Git.
-
-```
-DEBUG=True
-SECRET_KEY=...
-DATABASE_URL=postgres://user:password@db:5432/pingpulse_db
-REDIS_URL=redis://redis:6379/0
-```
 
 ---
 
