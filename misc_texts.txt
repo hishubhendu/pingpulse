@@ -1,0 +1,14 @@
+import os
+from pathlib import Path
+# import environ  # Manages environment variables securely
+
+# Initialize environment variables handler
+env = environ.Env(
+    # Set default values and cast types
+    DEBUG=(bool, False)
+)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Read .env file located at root directory
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
